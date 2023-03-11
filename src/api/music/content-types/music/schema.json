@@ -4,7 +4,8 @@
   "info": {
     "singularName": "music",
     "pluralName": "musics",
-    "displayName": "Music"
+    "displayName": "Music",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,16 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "file": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
