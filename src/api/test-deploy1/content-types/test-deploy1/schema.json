@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "test_deploys",
+  "collectionName": "test_deploy1s",
   "info": {
-    "singularName": "test-deploy",
-    "pluralName": "test-deploys",
-    "displayName": "Test1",
-    "description": ""
+    "singularName": "test-deploy1",
+    "pluralName": "test-deploy1s",
+    "displayName": "TestDeploy1"
   },
   "options": {
     "draftAndPublish": true
