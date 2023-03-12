@@ -4,8 +4,7 @@
   "info": {
     "singularName": "test-deploy",
     "pluralName": "test-deploys",
-    "displayName": "Test1",
-    "description": ""
+    "displayName": "TestDeploy"
   },
   "options": {
     "draftAndPublish": true
