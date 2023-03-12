@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aaaas",
+  "info": {
+    "singularName": "aaaa",
+    "pluralName": "aaaas",
+    "displayName": "AAAA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AAAA": {
+      "type": "string"
+    }
+  }
+}
