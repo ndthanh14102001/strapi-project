@@ -4,23 +4,17 @@
   "info": {
     "singularName": "album",
     "pluralName": "albums",
-    "displayName": "album",
+    "displayName": "Album",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "name": {
       "type": "string",
       "required": true
-    },
-    "musics": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::music.music",
-      "inversedBy": "albums"
     },
     "artists": {
       "type": "relation",
@@ -33,6 +27,17 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "albums_like"
+    },
+    "is_category": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "music": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::music.music",
+      "mappedBy": "albums"
     }
   }
 }

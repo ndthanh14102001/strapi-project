@@ -15,37 +15,37 @@
     "name": {
       "type": "string"
     },
-    "file": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "audios"
-      ]
-    },
-    "lyrics": {
-      "type": "richtext"
-    },
-    "description": {
-      "type": "richtext"
-    },
-    "artists": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "musics"
-    },
     "albums": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::album.album",
-      "mappedBy": "musics"
+      "inversedBy": "music"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "audios"
+      ]
     },
     "users_like": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "musics_like"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "lyrics": {
+      "type": "richtext"
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "musics_composeds"
     }
   }
 }

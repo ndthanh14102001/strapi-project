@@ -32,4 +32,25 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  "entity-relationship-chart": {
+    enabled: false,
+    config: {
+      // By default all contentTypes and components are included.
+      // To exlclude strapi's internal models, use:
+      exclude: [
+        "strapi::core-store",
+        "webhook",
+        "admin::api-token",
+        "plugin::upload.file",
+        "plugin::i18n.locale",
+        "plugin::users-permissions.permission",
+        "plugin::users-permissions.role",
+        "admin::api-token-permission",
+        "plugin::upload.folder",
+        "admin::transfer-token",
+        "admin::transfer-token-permission",
+        "admin::user",
+      ],
+    },
+  },
 });

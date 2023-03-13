@@ -69,18 +69,13 @@
       "target": "api::album.album",
       "mappedBy": "artists"
     },
-    "musics": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::music.music",
-      "mappedBy": "artists"
-    },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "phone": {
       "type": "integer",
@@ -105,6 +100,12 @@
       "relation": "manyToMany",
       "target": "api::music.music",
       "mappedBy": "users_like"
+    },
+    "musics_composeds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::music.music",
+      "inversedBy": "artists"
     }
   }
 }
