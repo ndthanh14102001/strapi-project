@@ -13,5 +13,23 @@ module.exports = ({ env }) => ({
         delete: {},
       },
     },
-   },
+  },
+  documentation: {
+    enableSwagger: false,
+    config: {
+      info: {
+        version: '1.0.0',
+      },
+      "x-strapi-config": {
+        "path": "/documentation",
+        "showGeneratedFiles": true,
+        "pluginsForWhichToGenerateDoc": [
+          "email",
+          "upload",
+          "users-permissions"
+        ],
+        "plugins": ['email', 'upload', 'users-permissions']
+      },
+    },
+  },
 });

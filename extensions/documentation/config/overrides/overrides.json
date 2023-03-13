@@ -1,0 +1,40 @@
+{
+  "components": {
+    "schemas": {
+      "FileInput": {
+        "properties": {
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileUpload"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/upload": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "summary": "Upload files",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/FileInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

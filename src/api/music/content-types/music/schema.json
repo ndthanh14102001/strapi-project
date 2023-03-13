@@ -20,11 +20,32 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "videos"
+        "audios"
       ]
     },
-    "artist": {
-      "type": "string"
+    "lyrics": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "musics"
+    },
+    "albums": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::album.album",
+      "mappedBy": "musics"
+    },
+    "users_like": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "musics_like"
     }
   }
 }
